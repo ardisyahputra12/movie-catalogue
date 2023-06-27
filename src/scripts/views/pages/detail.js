@@ -1,7 +1,7 @@
-import TheMovieDbSource from "../../data/themoviedb-source";
-import UrlParser from "../../routes/url-parser";
-import LikeButtonInitiator from "../../utils/like-button-initiator";
-import { createMovieDetailTemplate } from "../templates/template-creator";
+import TheMovieDbSource from '../../data/themoviedb-source';
+import UrlParser from '../../routes/url-parser';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
+import { createMovieDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
   async render() {

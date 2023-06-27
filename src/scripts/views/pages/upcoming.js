@@ -1,5 +1,5 @@
-import TheMovieDbSource from "../../data/themoviedb-source";
-import { createMovieItemTemplate } from "../templates/template-creator";
+import TheMovieDbSource from '../../data/themoviedb-source';
+import { createMovieItemTemplate } from '../templates/template-creator';
 
 const Upcoming = {
   async render() {

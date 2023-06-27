@@ -34,6 +34,7 @@ const FooterToolsInitiator = {
     event.stopPropagation();
 
     if (await this._isCurrentSubscriptionAvailable()) {
+      // eslint-disable-next-line no-alert
       window.alert('Already subscribe to push message');
       return;
     }
@@ -71,6 +72,7 @@ const FooterToolsInitiator = {
 
     const pushSubscription = await this._registrationServiceWorker?.pushManager.getSubscription();
     if (!pushSubscription) {
+      // eslint-disable-next-line no-alert
       window.alert('Haven\'t subscribing to push message');
       return;
     }
@@ -154,11 +156,13 @@ const FooterToolsInitiator = {
       const status = await Notification.requestPermission();
 
       if (status === 'denied') {
+        // eslint-disable-next-line no-alert
         window.alert('Cannot subscribe to push message because the status of notification permission is denied');
         return false;
       }
 
       if (status === 'default') {
+        // eslint-disable-next-line no-alert
         window.alert('Cannot subscribe to push message because the status of notification permission is ignored');
         return false;
       }
