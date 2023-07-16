@@ -1,6 +1,7 @@
 import TheMovieDbSource from '../../data/themoviedb-source';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
+import FavoriteMovieIdb from '../../data/favorite-movie-idb';
 import { createMovieDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
@@ -18,8 +19,9 @@ const Detail = {
     const likeButtonContainer = document.querySelector('#likeButtonContainer');
 
     movieContainer.innerHTML = createMovieDetailTemplate(movie);
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer,
+      favoriteMovies: FavoriteMovieIdb,
       movie: {
         id: movie.id,
         title: movie.title,
